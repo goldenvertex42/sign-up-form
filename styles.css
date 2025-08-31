@@ -164,6 +164,7 @@ fieldset {
     justify-content: space-between;
     gap: 20px;
     padding: 50px 20px 30px;
+    max-width: 60%;
 }
 
 .signup-form {
@@ -178,14 +179,15 @@ fieldset {
 .input-group {
     display: flex;
     flex-direction: column;
-    flex: 1 1 calc(50% - 10px);
+    flex: 1 1 auto;
+
 }
 
 
 input {
     padding: 0 10px;
     margin: 0;
-    width: 50%;
+    width: 90%;
     height: 1.75rem;
     background: none;
     box-sizing: border-box;
