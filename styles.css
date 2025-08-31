@@ -56,7 +56,6 @@ meter {
   font-size: 100%;
   margin: 0;
   box-sizing: border-box;
-  width: 100%;
 }
 
 
@@ -64,12 +63,6 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-p {
-  text-wrap: pretty;
-}
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
-}
 
 #root, #__next {
   isolation: isolate;
@@ -92,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 100vh;
     width: 50vw;
     display: flex;
-    flex-grow: 1;
+    flex: 2;
     position: relative;
     justify-content: center;
 }
@@ -121,10 +114,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
     max-height: 100vh;
     width: 100%;
+    flex: 5;
 }
 
 .info {
-    padding: 30px;
+    padding: 120px 30px 30px 30px;
     font-weight: 525;
     font-size: 1.2rem;
     letter-spacing: normal;
@@ -150,10 +144,9 @@ a {
 .form-container {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
     width: 100%;
     background-color: #FFFFFF;
-    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 legend {
@@ -170,7 +163,7 @@ fieldset {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
-    padding: 50px 20px 20px;
+    padding: 50px 20px 30px;
 }
 
 .signup-form {
@@ -189,22 +182,35 @@ fieldset {
 }
 
 
-input, textarea {
+input {
     padding: 0 10px;
     margin: 0;
-    width: 80%;
+    width: 50%;
     height: 1.75rem;
     background: none;
     box-sizing: border-box;
     border: 0.5px solid #E5E7EB;
-    border-radius: 4px;
+    border-radius: 6px;
     background-color: #FFFEFE;
 }
 
-input:focus {
+input:focus-visible {
     background: rgb(0 0 0 / 5%);
-    border: 0.2px solid blue;
+    border: 1px solid rgba(46, 99, 213, 0.5);
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+input:focus,
+:focus-visible {
+    background: rgb(0 0 0 / 5%);
+    border: 1px solid rgba(46, 99, 213, 0.5);
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+input[type="password"]:invalid,
+input[type="email"]:invalid {
+    border: 1px solid rgb(255, 0, 0);
 }
 
 .italic {
@@ -218,4 +224,25 @@ label {
     letter-spacing: 0.1em;
     color: #333333;
     font-weight: 525;
+}
+
+.submit-btn {
+    background-color: #596D48;
+    border-radius: 6px;
+    padding: 10px 50px;
+    margin: 30px 30px 25px;
+    color: #FFFEFE;
+    border: none;
+    font-family: Roboto medium;
+}
+
+.already {
+    font-size: 0.9rem;
+    margin-left: 35px;
+}
+
+.already a {
+    text-decoration: none;
+    color: #596D48;
+    font-weight: bold;
 }
