@@ -25,36 +25,40 @@
             <br>
             You <span class="italic">know</span> you want to.</p>
             <div class="form-container">
-                <form action="" method="post">
+                <form action="https://httpbin.org/" method="post" id="sign-up">
                     <fieldset class="signup_form">
                         <legend>Let's do this!</legend>
                         <div class="input-group">
                             <label for="first_name">FIRST NAME</label>
-                            <input type="text" id="first_name" name="first_name">
+                            <input type="text" class="input-direct" id="first_name" name="first_name">
                         </div>
                         <div class="input-group">
                             <label for="last_name">LAST NAME</label>
-                            <input type="text" id="last_name" name="last_name">
+                            <input type="text" class="input-direct" id="last_name" name="last_name">
                         </div>
                         <div class="input-group">
                             <label for="email">EMAIL</label>
-                            <input type="email" id="email" name="email">
+                            <input type="email" class="input-direct" id="email" name="email">
                         </div>
                         <div class="input-group">
                             <label for="phone_number">PHONE NUMBER</label>
-                            <input type="tel" id="phone_number" name="phone_number">
+                            <input type="tel" class="input-direct" id="phone_number" name="phone_number">
                         </div>
                         <div class="input-group">
                             <label for="password">PASSWORD</label>
-                            <input type="password" id="password" name="password">
+                            <input type="password" pattern="^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,24}$" 
+                            class="input-direct" id="password" name="password">
                         </div>
                         <div class="input-group">
                             <label for="confirm_password">CONFIRM PASSWORD</label>
-                            <input type="password" id="confirm_password" name="confirm_password">
+                            <input type="password" pattern="^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,24}$" 
+                            class="input-direct" id="confirm_password" name="confirm_password">
                         </div>
                     </fieldset>
                 </form>
             </div>
+            <button form="sign-up" class="submit-btn">Create Account</button>
+            <p class="already">Already have an account? <a href="https://goldenvertex42.github.io/odin-landing-page/">Log In</a></p>
         </div>
     </div>
 </body>
